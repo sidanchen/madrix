@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.madrix.dao.OperatorLogDao">
+    <resultMap id="OperatorLogRM" type="OperatorLog">
+        <id column="id" property="id"></id>
+        <result column="operator" property="operator"></result>
+        <result column="order" property="order"></result>
+        <result column="value" property="value"></result>
+        <result column="operating_time" property="operatingTime"></result>
+    </resultMap>
+
+    <insert id="insert" parameterType="OperatorLog">
+        insert operator_log(`operator`,`order`,`value`,`operating_time`) values(#{operator},#{order},#{value},#{operatingTime});
+    </insert>
+    <select id="adminFindLogByPage" resultMap="OperatorLogRM">
+      select * from operator_log order by operating_time desc limit #{0},#{1};
+    </select>
+
+    <select id="operatorFindLogByPage" resultMap="OperatorLogRM">
+      select * from operator_log where operator = #{2} order by operating_time desc limit #{0},#{1};
+    </select>
+
+    <select id="adminLogTotal" resultType="int">
+        select count(*) from operator_log;
+    </select>
+    <select id="operatorLogTotal" resultType="int">
+        select count(*) from operator_log where operator = #{0};
+    </select>
+</mapper>

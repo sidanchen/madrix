@@ -1,0 +1,53 @@
+@media ( min-width :900px) and (max-width:5000px) {
+	.ui-pagination-container {
+		height: 14px; 
+		line-height: 14px;
+	}
+	.ui-pagination-container .ui-pagination-page-item {
+		font-size: 14px;
+		padding: 4px 10px;
+		background: #fff;
+		border: 1px solid #c5b7b7;
+		color: #888;
+		margin: 0 3px;
+		text-decoration: none;
+	}
+	.ui-pagination-container .ui-pagination-page-item:hover {
+		border-color: #008f3f;
+		color: #568dbd;
+		text-decoration: none;
+	}
+	.ui-pagination-container .ui-pagination-page-item.active {
+		background: #008f3f;
+		border-color: #008f3f;
+		color: #fff;
+		cursor: default;
+	}
+}
+
+@media ( min-width :300px) and (max-width:899px) {
+	.ui-pagination-container {
+		height: 14px;
+		line-height: 14px;
+	}
+	.ui-pagination-container .ui-pagination-page-item {
+		font-size: 10px;
+		padding: 4px 10px;
+		background: #fff;
+		border: 1px solid #c5b7b7;
+		color: #888;
+		margin: 0 3px;
+		text-decoration: none;
+	}
+	.ui-pagination-container .ui-pagination-page-item:hover {
+		border-color: #008f3f;
+		color: #568dbd;
+		text-decoration: none;
+	}
+	.ui-pagination-container .ui-pagination-page-item.active {
+		background: #008f3f;
+		border-color: #008f3f;
+		color: #fff;
+		cursor: default;
+	}
+}

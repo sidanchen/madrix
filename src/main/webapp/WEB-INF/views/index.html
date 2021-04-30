@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Light Controll</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 管理页面样式 -->
+
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 页面代码开始 -->
+    <!-- 最外层盒子 -->
+    <div id="wrapper">
+        <!-- 中间主体部分开始 -->
+        <div id="main">
+            <!--中间容器  -->
+            <div class="container">
+                <div class="col-md-12 column">
+                    <!-- 面板内容开始 -->
+                    <div class="panel panel-default" id="panelcontent">
+                        <!-- 面板主体开始 -->
+                        <div class="panel-body">
+                            <div id="panelbody">
+                                <!-- 用户内容输入框组开始 -->
+                                <form>
+                                    <!-- 进度条开始 -->
+                                    <div class="col-md-12 col-xs-12">
+                                        <h3 class="progress-title">Light Controll</h3>
+                                        <ul id="test" class="progress col-md-6  ">
+                                            <li class="boxcol" id="Progress0" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress1" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress2" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress3" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress4" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress5" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress6" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress7" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress8" onclick="brightness(this)"></li>
+                                            <li class="boxcol" id="Progress9" onclick="brightness(this)"></li>
+                                        </ul>
+                                    </div>
+                                    <!-- 进度条结束 -->
+                                    <div style="clear: both"></div>
+                                    <!-- 开关按钮开始 --> 
+                                    <div class="col-md-12">
+                                        <ul id="boxborder">
+                                            <li class="box1" id="box-red" onclick='shadow(this,0)'>
+                                                <!--<img src="gc?iName=S1P1">-->
+                                            </li>
+                                            <li class="box1" id="box-yellow" onclick='shadow(this,1)'>
+                                                <!--<img src="gc?iName=S1P2">-->
+                                            </li>
+                                            <li class="box1" id="box-gray" onclick='shadow(this,2)'>
+                                                <!--<img src="gc?iName=S1P3">-->
+                                            </li>
+                                            <li class="box1" id="box-pink" onclick='shadow(this,3)'>
+                                                <!--<img src="gc?iName=S1P4">-->
+                                            </li>
+
+                                            <li class="box1  text-center" id="bigbtn">
+                                                <img src="images/o2.png" width="100%" height="100%" id="openimg" onclick="openclose()"/></li>
+                                            <li class="box1" id="box-green" onclick='shadow(this,5)'>
+                                                <!--<img src="gc?iName=S1P5">-->
+                                            </li>
+                                            <li class="box1" id="box-orange" onclick='shadow(this,6)'>
+                                                <!--<img src="gc?iName=S1P6">-->
+                                            </li>
+                                            <li class="box1" id="box-purple" onclick='shadow(this,7)'>
+                                                <!--<img src="gc?iName=S1P7">-->
+                                            </li>
+                                            <li class="box1" id="box-cyan" onclick='shadow(this,8)'>
+                                                <!--<img src="gc?iName=S1P8">-->
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 开关按钮结束 -->
+
+                                    <div class="col-md-12">
+                                        <a href="oexit" class="return_left col-xs-6 text-left">Logout</a>
+                                        <a href="operator_log" class="return_right  col-xs-6 text-right">Log</a>
+                                    </div>
+                                </form>
+                                <!-- 用户内容输入框组结束 -->
+                            </div>
+                        </div>
+                        <!-- 面板主体结束 -->
+                    </div>
+                    <!-- 面板内容结束 -->
+                </div>
+            </div>
+            <!-- 中间主体部分结束 -->
+            <!-- 页面代码结束 -->
+        </div>
+    </div>
+    <!-- jquery文件 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/isl.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Modify the password</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 管理页面样式 -->
+    <link href="css/find.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- 页面代码开始 -->
+    <!-- 最外层盒子 -->
+    <div id="wrapper">
+        <!-- 中间主体部分开始 -->
+        <div id="main">
+            <!--中间容器  -->
+            <div class="container">
+                <div class="col-md-12 column">
+                    <!-- 面板内容开始 -->
+                    <div class="panel panel-default" id="panelcontent">
+                        <!-- 面板主体开始 -->
+                        <div class="panel-body">
+
+                            <div id="panelbody">
+                                <!-- 用户内容输入框组开始 -->
+                                <form>
+                                     <h3>Your New Password</h3>
+                                    <hr />
+                                    <!-- 密码 -->
+                                    <div class="form-group">
+                                        <label for="pwd">New Password:</label>
+                                        <input type="password" class="form-control" id="pwd">
+                                    </div>
+                                    <!-- 确认密码 -->
+                                    <div class="form-group">
+                                        <label for="pwd">Confirm Password:</label>
+                                        <input type="password" class="form-control" id="Password1">
+                                    </div>
+                                    <!-- 添加按钮 -->
+                                    <div class="col-md-12 column text-center">
+                                        <button type="submit" class="btn btn-primary text-cener">Submit</button>
+                                    </div>
+                                </form>
+                                <!-- 用户内容输入框组结束 -->
+                                
+                            </div>
+                        </div>
+                        <!-- 面板主体结束 -->
+                    </div>
+                    <!-- 面板内容结束 -->
+                </div>
+            </div>
+            <!-- 中间主体部分结束 -->
+            <!-- 页面代码结束 -->
+        </div>
+   </div>
+    <!-- jquery文件 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap文件 -->
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function(){
+            $(".btn").click(function(){
+                var password = $("#pwd").val();
+                var confirmPwd = $("#Password1").val();
+                if(password == ""){
+                    alert("Password cannot be empty!");
+                    return false;
+                }
+                if(confirmPwd == ""){
+                    alert("Verify that the password cannot be empty!");
+                    return false;
+                }
+                if(confirmPwd != password){
+                    alert("Double password input inconsistency!");
+                    return false;
+                }
+                $.ajax({
+                    url:"up",
+                    data:{"password":password},
+                    type:"post",
+                    dataType:"json",
+                    success:function(data){
+                        if(data.status == "success"){
+                            window.location.href="login.html";
+                        }else{
+                            alert(data.msg);
+                        }
+                    }
+                })
+                return false;
+            });
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Manage</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- 管理页面样式 -->
+    <link href="css/Management.css" rel="stylesheet"/>
+    <link href="css/jquery.pagination.css" rel="stylesheet"/>
+    <script src="js/jquery.min.js"></script>
+
+</head>
+<body>
+<!-- 页面代码开始 -->
+<!-- 最外层盒子 -->
+<div id="wrapper">
+    <!-- 中间主体部分开始 -->
+    <div id="main">
+        <!--中间容器  -->
+        <div class="container">
+            <div class="col-md-12 column">
+                <!-- 面板内容开始 -->
+                <div class="panel panel-default" id="panelcontent">
+                    <!-- 面板主体开始 -->
+                    <div class="panel-body">
+
+                        <div id="panelbody">
+                            <!-- 用户内容输入框组开始 -->
+                            <form>
+                                <div class="form-group">
+                                    <label for="text">User Name:</label>
+                                    <input type="text" class="form-control" id="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+                                <div class="form-group">
+                                    <label for="text">Email:</label>
+                                    <input type="text" class="form-control" id="email">
+                                </div>
+                                <div class="col-md-12 column text-center">
+                                    <button type="submit" class="btn btn-primary text-cener">Add User</button>
+                                </div>
+                            </form>
+                            <!-- 用户内容输入框组结束 -->
+                            <!-- 用户列表开始 -->
+                            <div>
+                                <h3>User List</h3>
+                                <!-- 用户表格开始 -->
+                                <table class="col-md-12 column usertable">
+
+
+                                </table>
+                                <!-- 用户表格结束 -->
+                                <br/>
+                                <!-- 分页开始 -->
+                                <div class="col-md-12 column text-center">
+                                    <ul class="pagination page">
+
+                                    </ul>
+                                </div>
+                                <!-- 分页结束 -->
+                                <!-- 返回登陆 -->
+                                <a href="exit">Logout</a>
+                                &nbsp;&nbsp; &nbsp;&nbsp;
+                                <a href="admin_log" >Log</a>
+                                &nbsp;&nbsp; &nbsp;&nbsp;
+                                <a href="parameters">Weather</a>
+                            </div>
+                            <!-- 用户列表结束 -->
+                        </div>
+                    </div>
+                    <!-- 面板主体结束 -->
+                </div>
+                <!-- 面板内容结束 -->
+            </div>
+        </div>
+        <!-- 中间主体部分结束 -->
+        <!-- 页面代码结束 -->
+    </div>
+</div>
+<!-- jquery文件 -->
+
+<!-- bootstrap文件 -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.pagination.min.js"></script>
+<script src="js/isl.js"></script>
+<script src="js/management.js"></script>
+</body>
+</html>

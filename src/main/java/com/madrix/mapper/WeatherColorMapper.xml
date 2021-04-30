@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.madrix.dao.WeatherColorDao">
+
+    <resultMap id="WeatherColorRM" type="WeatherColor">
+        <id column="id" property="id"></id>
+        <result column="weather" property="weather"></result>
+        <result column="color" property="color"></result>
+        <result column="brightness" property="brightness"></result>
+    </resultMap>
+
+    <select id="findByProperty" parameterType="WeatherColor" resultMap="WeatherColorRM">
+        select * from weather_color
+        <where>
+            <if test="weather != null and weather != ''">
+                weather = #{weather}
+            </if>
+            <if test="color != null and color != ''">
+                and color = #{color}
+            </if>
+            <if test="brightness != null and brightness != ''">
+                and brightness = #{brightness};
+            </if>
+        </where>
+    </select>
+
+    <insert id="insert" parameterType="WeatherColor">
+        insert weather_color(`weather`,`color`,`brightness`) values(#{weather},#{color},#{brightness});
+    </insert>
+    <delete id="delete">
+        delete from weather_color where id = #{0};
+    </delete>
+    <select id="findTotal" resultType="int">
+        select count(*) from weather_color;
+    </select>
+    <select id="findByPage" resultMap="WeatherColorRM">
+        select * from weather_color order by id desc limit #{0},#{1};
+    </select>
+    <select id="findById" resultMap="WeatherColorRM">
+        select * from weather_color where id = #{0};
+    </select>
+
+    <select id="findByWeather" resultMap="WeatherColorRM">
+        select * from weather_color where weather = #{0};
+    </select>
+</mapper>

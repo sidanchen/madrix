@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.madrix.dao.OperatorDao">
+
+    <resultMap id="OperatorRM" type="Operator">
+        <id column="id" property="id"></id>
+        <result column="login_name" property="loginName"></result>
+        <result column="password" property="password"></result>
+        <result column="email" property="email"></result>
+        <result column="login_time" property="loginTime"></result>
+        <result column="uuid" property="uuid"></result>
+        <result column="valid_time" property="validTime"></result>
+    </resultMap>
+
+    <insert id="insert" parameterType="Operator">
+        INSERT operator(`login_name`,`password`,`email`,`login_time`,`uuid`,`valid_time`)
+        VALUES(#{loginName},#{password},#{email},#{loginTime},#{uuid},#{validTime});
+    </insert>
+    <select id="findById" resultMap="OperatorRM">
+      select * from operator where id = #{0}
+    </select>
+    <select id="userNameOrEmailIsExist" resultMap="OperatorRM">
+        SELECT * FROM operator WHERE login_name = #{0} OR email = #{1};
+    </select>
+
+    <select id="findByProperty" parameterType="Operator" resultMap="OperatorRM">
+        SELECT * FROM operator
+        <where>
+            <if test="loginName != null and loginName != ''">
+                login_name = #{loginName}
+            </if>
+            <if test="password != null and password != ''">
+                and password = #{password}
+            </if>
+            <if test="email != null and email != ''">
+                and email = #{email}
+            </if>
+            <if test="loginTime != null">
+                and login_time = #{loginTime}
+            </if>
+            <if test="uuid != null and uuid != ''">
+                and uuid = #{uuid}
+            </if>
+            <if test="validTime != null">
+                and valid_time = #{validTime}
+            </if>
+        </where>
+    </select>
+    <select id="count" resultType="int">
+        select count(*) from operator;
+    </select>
+    
+    <select id="findUserByPage" resultMap="OperatorRM">
+        select *  from operator where login_name != 'admin'  order by id desc limit #{0},#{1};
+    </select>
+    <delete id="delete" parameterType="int">
+        delete from operator where id = #{0};
+    </delete>
+
+    <update id="update" parameterType="Operator">
+        update operator
+        <set>
+            <if test="loginName != null and loginName != ''">
+                login_name = #{loginName},
+            </if>
+            <if test="password != null and password != ''">
+                password = #{password},
+            </if>
+            <if test="email != null and email != ''">
+                email = #{email},
+            </if>
+            <if test="loginTime != null">
+                login_time = #{loginTime},
+            </if>
+            <if test="uuid != null and uuid != ''">
+                uuid = #{uuid},
+            </if>
+            <if test="validTime != null">
+                valid_time = #{validTime},
+            </if>
+        </set>
+        <where>
+            id = #{id};
+        </where>
+    </update>
+</mapper>

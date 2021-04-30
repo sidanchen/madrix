@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.madrix.dao.LightStatusDao">
+
+    <resultMap id="LightStatusRM" type="LightStatus">
+        <id column="id" property="id"></id>
+        <result column="status_time" property="statusTime"></result>
+        <result column="brightness" property="brightness"></result>
+        <result column="color" property="color"></result>
+        <result column="on_off" property="onOff"></result>
+    </resultMap>
+    <insert id="insert" parameterType="LightStatus">
+        insert light_status(status_time,brightness,color,on_off) values(#{statusTime},#{birghtness},#{color},#{onOff});
+    </insert>
+    <update id="update" parameterType="LightStatus">
+        update light_status
+        <set>
+            <if test="statusTime != null">
+                status_time = #{statusTime},
+            </if>
+            <if test="brightness != null and brightness != ''">
+                brightness = #{brightness},
+            </if>
+            <if test="color != null and color != ''">
+                color = #{color},
+            </if>
+            <if test="onOff != null and onOff != ''">
+                on_off = #{onOff}
+            </if>
+        </set>
+        <where>
+            id = #{id}
+        </where>
+    </update>
+    <select id="findMaxId" resultMap="LightStatusRM">
+        select * from light_status where id in (select max(id) from light_status);
+    </select>
+</mapper>
