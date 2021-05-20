@@ -30,7 +30,8 @@
                                 <form>
                                     <!-- 进度条开始 -->
                                     <div class="col-md-12 col-xs-12">
-                                        <h3 class="progress-title">Light Controll</h3>
+                                        <h3 class="progress-title">Light Control</h3><span id="redirect1">Current:Maryland</span>&nbsp;&nbsp;<a href="#" id="redirect2">Governor Mansion</a>
+                                        <!--<input id="redirect1Location" value="http://localhost:8081/madrix/loginredirect.jsp">-->
                                         <ul id="test" class="progress col-md-6  ">
                                             <li class="boxcol" id="Progress0" onclick="brightness(this)"></li>
                                             <li class="boxcol" id="Progress1" onclick="brightness(this)"></li>
@@ -101,7 +102,18 @@
     <script src="js/jquery.min.js"></script>
     <!-- bootstrap文件 -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/isl.js"></script>
     <script src="js/index.js"></script>
+<script>
+    $(function(){
+        $("#redirect1").click(function(){
+            window.location.href = "http://madrix.ngrok.io/madrix/index?userName="+$.cookie("userName") + "&password="+$.cookie("password");
+        });
+        $("#redirect2").click(function(){
+            window.location.href = "http://bd539275830f.ngrok.io/madrix/index?userName="+$.cookie("userName") + "&password="+$.cookie("password");
+        });
+    });
+</script>
 </body>
 </html>

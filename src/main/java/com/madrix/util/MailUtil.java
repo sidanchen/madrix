@@ -11,6 +11,7 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import com.madrix.service.impl.RemoteInfoSynServiceImpl;
 import com.madrix.util.UUID;
 import com.sun.mail.util.MailSSLSocketFactory;
 
@@ -19,8 +20,8 @@ public class MailUtil {
 	// 发件人的 邮箱 和 密码（替换为自己的邮箱和密码）
 	// PS: 某些邮箱服务器为了增加邮箱本身密码的安全性，给 SMTP 客户端设置了独立密码（有的邮箱称为“授权码”）,
 	// 对于开启了独立密码的邮箱, 这里的邮箱密码必需使用这个独立密码（授权码）。
-	public static String myEmailAccount = "info@g5smart.com";
-	public static String myEmailPassword = "G5smart5";
+	public static String myEmailAccount = "support@epoweron.com";
+	public static String myEmailPassword = "XGdie264";
 
 	// 发件人邮箱的 SMTP 服务器地址, 必须准确, 不同邮件服务器地址不同, 一般(只是一般, 绝非绝对)格式为: smtp.xxx.com
 	// 网易163邮箱的 SMTP 服务器地址为: smtp.163.com
@@ -37,6 +38,9 @@ public class MailUtil {
 	 * @throws GeneralSecurityException
 	 */
 	public static String sendMail(String receiveMailAccount, String msg,String title) throws GeneralSecurityException {
+		if ("0".equals(RemoteInfoSynServiceImpl.sendEmail)) {
+			return "success";
+		}
 		// 1. 创建参数配置, 用于连接邮件服务器的参数配置
 		Properties props = new Properties(); // 参数配置
 		props.setProperty("mail.transport.protocol", "smtp"); // 使用的协议（JavaMail规范要求）

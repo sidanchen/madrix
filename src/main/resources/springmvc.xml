@@ -55,7 +55,9 @@
             <mvc:exclude-mapping path="/supe"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/checkUrl"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/up"></mvc:exclude-mapping>
-            <mvc:exclude-mapping path="/il"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/add"></mvc:exclude-mapping>
+            <mvc:exclude-mapping path="/remoteUpdatePassword"></mvc:exclude-mapping>
+            <!--<mvc:exclude-mapping path="/il"></mvc:exclude-mapping>-->
             <!--
             <mvc:exclude-mapping path="/man"></mvc:exclude-mapping>
             <mvc:exclude-mapping path="/index"></mvc:exclude-mapping>
@@ -88,7 +90,6 @@
 
     <!--配置页面访问路径-->
     <mvc:view-controller path="/man" view-name="management.html"></mvc:view-controller>
-    <mvc:view-controller path="/index" view-name="index.html"></mvc:view-controller>
     <mvc:view-controller path="/parameters" view-name="parameters.html"></mvc:view-controller>
 
     <mvc:annotation-driven>

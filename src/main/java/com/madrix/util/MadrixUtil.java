@@ -25,7 +25,7 @@ public class MadrixUtil {
     public static String getStoragePlaceLeft() throws ClientProtocolException, IOException
     {
         //拼接请求路径
-        String url = runHost + "RemoteCommands/?GetStoragePlaceLeft";
+        String url = runHost + "RemoteCommands/?GetStoragePlaceDeckA";
         return HttpUtil.doGetString(url);
     }
 
@@ -84,7 +84,7 @@ public class MadrixUtil {
      * @throws IOException
      */
     public static void setColor(String imgName) throws IOException {
-        String url = runHost + "RemoteCommands/?SetStorageLeft="+imgName;
+        String url = runHost + "RemoteCommands/?SetStorageDeckA="+imgName;
         HttpUtil.doGetString(url);
     }
 

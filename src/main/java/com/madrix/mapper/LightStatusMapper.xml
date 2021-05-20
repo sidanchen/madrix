@@ -10,7 +10,7 @@
         <result column="on_off" property="onOff"></result>
     </resultMap>
     <insert id="insert" parameterType="LightStatus">
-        insert light_status(status_time,brightness,color,on_off) values(#{statusTime},#{birghtness},#{color},#{onOff});
+        insert light_status(status_time,brightness,color,on_off) values(#{statusTime},#{brightness},#{color},#{onOff});
     </insert>
     <update id="update" parameterType="LightStatus">
         update light_status

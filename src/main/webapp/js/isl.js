@@ -11,6 +11,9 @@ $(function(){
                 if(data.status == "faild"){
                     window.location.href = "login.html";
                 }
+            },
+            error:function(xhr) {
+                window.location.href = "login.html";
             }
         })
     },1000)

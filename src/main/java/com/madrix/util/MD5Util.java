@@ -4,7 +4,7 @@ import java.security.MessageDigest;
 
 public class MD5Util {
 	public static void main(String[] args) {
-		String md5Str = getMD5("jdlkagjodsijoijdsoiajgodisjagoijdsoagjoiasjg");
+		String md5Str = getMD5("admin");
 		System.out.println(md5Str);
 	}
 

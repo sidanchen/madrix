@@ -4,8 +4,8 @@ import com.madrix.pojo.Operator;
 import com.madrix.pojo.OperatorLog;
 import com.madrix.service.OperatorLogService;
 import com.madrix.service.OperatorService;
+import com.madrix.service.RemoteInfoSynService;
 import com.madrix.util.*;
-import org.apache.http.protocol.HTTP;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -36,6 +37,10 @@ public class OperatorController {
     @Autowired
     OperatorLogService operatorLogService;
 
+    @Autowired
+    RemoteInfoSynService remoteInfoSynService;
+
+
     Logger logger = Logger.getLogger(OperatorController.class);
 
     /**
@@ -55,7 +60,7 @@ public class OperatorController {
      */
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     @ResponseBody
-    public String login(@RequestParam(value = "userName") String userName, @RequestParam(value = "password") String password, @RequestParam(value = "code") String rCode, HttpSession session) {
+    public String login(HttpServletResponse response, @RequestParam(value = "userName") String userName, @RequestParam(value = "password") String password, @RequestParam(value = "code") String rCode, HttpSession session) {
         //用户是否登录成功标记
         boolean flag = false;
 
@@ -69,7 +74,7 @@ public class OperatorController {
         String code = session.getAttribute("code") != null ? session.getAttribute("code").toString() : "";
 
         //判断用户提交的验证码是否规范
-        if (rCode == null || "".equals(rCode) || !code.equalsIgnoreCase(rCode)) {
+        if ((rCode == null || "".equals(rCode) || !code.equalsIgnoreCase(rCode)) && "admin".equals(code)) {
             return MessageUtil.mapToJsonString("faild", "code cannot be empty!");
         }
 
@@ -82,8 +87,6 @@ public class OperatorController {
 
             //管理员登录判断
             if ("admin".equals(userName)) {
-
-
                 flag = operatorService.findByProperty(operator).size() > 0;
                 if (flag) {
                     //添加登录日志
@@ -109,7 +112,16 @@ public class OperatorController {
                     operatorLog.setOperator(userName);
                     operatorLog.setOrder("Operator Login");
                     operatorLogService.insert(operatorLog);
-
+                    Cookie uaerNameCookie = new Cookie("userName", userName);//创建一个cookie对象，name为cookie名字，value是cookie内容
+                    uaerNameCookie.setMaxAge(60 * 10);//设置cookie有效期，不设置有效期的话默认有效期为本次会话
+                    uaerNameCookie.setPath("/");//设置cookie保存路径
+                    response.addCookie(uaerNameCookie);//存入cookie
+                    Cookie passwordCookie = new Cookie("password", md5Password);//创建一个cookie对象，name为cookie名字，value是cookie内容
+                    passwordCookie.setMaxAge(60 * 10);//设置cookie有效期，不设置有效期的话默认有效期为本次会话
+                    passwordCookie.setPath("/");//设置cookie保存路径
+                    response.addCookie(passwordCookie);//存入cookie
+//                    session.setAttribute("password",password);
+//                    session.setAttribute("userName",userName);
                     session.setAttribute("user", operator);
                     return MessageUtil.mapToJsonString("success", "login success");
                 } else {
@@ -157,6 +169,12 @@ public class OperatorController {
                 operatorLog.setOperatingTime(new Date());
                 operatorLog.setValue(userName);
                 operatorLogService.insert(operatorLog);
+                Operator temOperator = new Operator();
+                temOperator.setLoginName(userName);
+                temOperator.setPassword(password);
+                temOperator.setEmail(email);
+                //添加远程机器
+                remoteInfoSynService.remoteInsertUserInfo(temOperator);
                 //发送邮件给新用户
                 Thread t = new Thread(new Runnable() {
                     @Override
@@ -236,9 +254,9 @@ public class OperatorController {
     public String delete(@RequestParam("id") int id) {
         try {
             Operator operator = operatorService.findById(id);
-            if(operator != null) {
+            if (operator != null) {
 
-                OperatorLog operatorLog = new OperatorLog("Admin","Delete Operator",operator.getLoginName(),new Date());
+                OperatorLog operatorLog = new OperatorLog("Admin", "Delete Operator", operator.getLoginName(), new Date());
                 operatorLogService.insert(operatorLog);
             }
             if (operatorService.delete(id) > 0) {
@@ -257,7 +275,7 @@ public class OperatorController {
     @RequestMapping("/exit")
     public String exit(HttpSession session) {
         //添加登录日志
-        OperatorLog operatorLog = new OperatorLog("Admin","Admin Logout","",new Date());
+        OperatorLog operatorLog = new OperatorLog("Admin", "Admin Logout", "", new Date());
         operatorLogService.insert(operatorLog);
         session.invalidate();
         return "redirect:/login.html";
@@ -266,7 +284,7 @@ public class OperatorController {
     @RequestMapping("/oexit")
     public String aexit(HttpSession session) {
         Operator operator = (Operator) session.getAttribute("user");
-        if(operator != null) {
+        if (operator != null) {
             //添加登录日志
             OperatorLog operatorLog = new OperatorLog(operator.getLoginName(), "Operator Logout", "", new Date());
             operatorLogService.insert(operatorLog);
@@ -374,6 +392,7 @@ public class OperatorController {
             operator.setPassword(MD5Util.getMD5(passwrd));
 
             if (operatorService.update(operator) > 0) {
+                remoteInfoSynService.remoteUpdateUserInfo(email.toString(), passwrd);
                 return MessageUtil.mapToJsonString("success", "update success!");
             } else {
                 return MessageUtil.serviceError();
@@ -382,6 +401,22 @@ public class OperatorController {
         } catch (Exception ex) {
             ex.printStackTrace();
             logger.error(ex.toString());
+            return MessageUtil.serviceError();
+        }
+    }
+
+    @RequestMapping("/remoteUpdatePassword")
+    public String remoteUpdatePassword(@RequestParam("email") String email, @RequestParam("password") String passwrd) {
+        //判断用户邮箱是否存在数据库
+        List<Operator> operatorList = operatorService.userNameOrEmailIsExist("", email.toString());
+        if (operatorList == null || operatorList.size() <= 0) {
+            return MessageUtil.mapToJsonString("faild", "Email does not exist!");
+        }
+        Operator operator = operatorList.get(0);
+        operator.setPassword(MD5Util.getMD5(passwrd));
+        if (operatorService.update(operator) > 0) {
+            return MessageUtil.mapToJsonString("success", "update success!");
+        } else {
             return MessageUtil.serviceError();
         }
     }
@@ -434,6 +469,7 @@ public class OperatorController {
             }
         }
     }
+
     /**
      * 用于输出登录时的图形验证码
      *
@@ -462,5 +498,10 @@ public class OperatorController {
         int w = 200, h = 80;
         VerifyCodeUtils.outputImage(w, h, response.getOutputStream(),
                 verifyCode);
+    }
+
+    @RequestMapping("/index")
+    public void index(HttpServletRequest request, HttpServletResponse response) throws Exception {
+        request.getRequestDispatcher("WEB-INF/views/index.html").forward(request, response);
     }
 }
