@@ -17,7 +17,7 @@
 
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<!-- 指定连接数据库的驱动-->
-		<property name="driverClass" value="${driver}"/>
+		<property name="driverClass" value="com.mysql.cj.jdbc.Driver"/>
 		<!-- 指定连接数据库的URL-->
 		<property name="jdbcUrl" value="${url}"/>
 		<!-- 指定连接数据库的用户名-->

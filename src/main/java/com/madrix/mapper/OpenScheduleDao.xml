@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.madrix.dao.OpenScheduleDao">
+
+
+    <insert id="insert" parameterType="OpenSchedule">
+        insert
+        openschedule
+        (
+        beforeSunrise,
+        afterSunrise,
+        beforeSunset,
+        afterSunset
+        )
+        values
+        (
+        #{beforeSunrise},
+        #{afterSunrise},
+        #{beforeSunset},
+        #{afterSunset}
+        )
+    </insert>
+
+    <update id="update" parameterType="OpenSchedule">
+        update openschedule set beforeSunrise = #{beforeSunrise},afterSunrise =
+        #{afterSunrise},beforeSunset=#{beforeSunset},afterSunset=#{afterSunset}
+        <where>
+            id = #{id}
+        </where>
+    </update>
+
+    <select id="findById" resultType="OpenSchedule">
+        select id,beforeSunrise,afterSunrise,beforeSunset,afterSunset
+        from openschedule
+    </select>
+</mapper>

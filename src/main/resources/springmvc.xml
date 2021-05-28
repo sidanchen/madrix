@@ -91,6 +91,7 @@
     <!--配置页面访问路径-->
     <mvc:view-controller path="/man" view-name="management.html"></mvc:view-controller>
     <mvc:view-controller path="/parameters" view-name="parameters.html"></mvc:view-controller>
+    <mvc:view-controller path="/schedule" view-name="schedule.html"></mvc:view-controller>
 
     <mvc:annotation-driven>
         <mvc:message-converters register-defaults="true">

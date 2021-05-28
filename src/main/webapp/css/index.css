@@ -1,28 +1,28 @@
 ﻿/*green*/
 @media screen and (max-width:350px) and (min-width:299px) {
-*{
-    /*background-color :green   ;*/
-}
+    *{
+        /*background-color :green   ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
         /*border :1px solid black;*/
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :220px;
         /*border: 1px solid black;*/
@@ -37,75 +37,75 @@
         margin: 7% 3%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 35px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 15px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 35px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 15px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*red*/
 @media screen and (max-width:400px) and (min-width:350px) {
-*{
-    /*background-color :red  ;*/
-}
+    *{
+        /*background-color :red  ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         /*height: 800px;*/
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
         /*border :1px solid black;*/
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :250px;
         /*border: 1px solid black;*/
@@ -120,74 +120,74 @@
         margin: 7% 3%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 35px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 15px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 35px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 15px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
- /*yellow*/
+/*yellow*/
 @media screen and (max-width:450px) and (min-width:400px) {
-*{
-    /*background-color :yellow  ;*/
-}
+    *{
+        /*background-color :yellow  ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         /*height: 800px;*/
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :320px;
         /*border: 1px solid red;*/
@@ -202,74 +202,74 @@
         margin: 7% 3%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 40px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 20px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 40px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 20px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*gray*/
 @media screen and (max-width:500px) and (min-width:450px) {
-*{
-    /*background-color :gray  ;*/
-}
+    *{
+        /*background-color :gray  ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         /*height: 800px;*/
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :320px;
         /*border: 1px solid red;*/
@@ -284,74 +284,74 @@
         margin: 7% 3%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 40px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 20px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 40px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 20px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*black*/
 @media screen and (max-width:550px) and (min-width:500px) {
-*{
-    /*background-color :black ;*/
-}
+    *{
+        /*background-color :black ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :300px;
         /*border: 1px solid red;*/
@@ -366,74 +366,74 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*pink*/
 @media screen and (max-width:668px) and (min-width:550px) {
-*{
-    /*background-color :pink ;*/
-}
+    *{
+        /*background-color :pink ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :410px;
         /*border: 1px solid red;*/
@@ -448,74 +448,74 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*orange*/
 @media screen and (max-width:700px) and (min-width:668px) {
-*{
-    /*background-color :orange ;*/
-}
+    *{
+        /*background-color :orange ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :410px;
         /*border: 1px solid red;*/
@@ -530,74 +530,74 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*skyblue*/
 @media screen and (max-width:768px) and (min-width:700px) {
-*{
-    /*background-color :skyblue ;*/
-}
+    *{
+        /*background-color :skyblue ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :410px;
         /*border: 1px solid red;*/
@@ -612,74 +612,74 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*red*/
 @media screen and (max-width:800px) and (min-width:768px) {
-*{
-    /*background-color :red ;*/
-}
+    *{
+        /*background-color :red ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :410px;
         /*border: 1px solid red;*/
@@ -694,74 +694,74 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*yellow*/
 @media screen and (max-width:850px) and (min-width:800px) {
-*{
-    /*background-color :red ;*/
-}
+    *{
+        /*background-color :red ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :410px;
         /*border: 1px solid red;*/
@@ -776,74 +776,74 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
 }
 /*pink*/
 @media screen and (max-width:920px) and (min-width:850px) {
-*{
-    /*background-color :pink ;*/
-}
+    *{
+        /*background-color :pink ;*/
+    }
     /*中间主体部分开始*/
     #main {
         width: 100%;
         height: 800px;
-         
+
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 0%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      /*面板主体*/
+    /*面板主体*/
     #panelbody {
         margin: 3% 0%;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         height :410px;
         /*border: 1px solid red;*/
@@ -858,46 +858,46 @@
         margin: 7% 7%;
         float: left;
     }
-        
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
     /* <!-- 中间主体部分结束 -->*/
 
@@ -909,17 +909,17 @@
     #main {
         width: 100%;
         height: 800px;
-         background-image: url(../images/usa.jpg);
+        background-image: url(../images/usa.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 5% 10%;
-             /*border :1px solid red;*/
+        /*border :1px solid red;*/
         box-shadow: 5px 5px 10px #06C;
     }
-      #boxborder {
+    #boxborder {
         width: 100%;
         /*border: 1px solid red;*/
     }
@@ -930,46 +930,46 @@
         margin: 2% 2%;
         float: left;
     }
-  
-      
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
 }
 /* 小屏幕结束 */
@@ -979,17 +979,17 @@
     #main {
         width: 100%;
         height: 800px;
-         background-image: url(../images/usa.jpg);
+        background-image: url(../images/usa.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
     /*面板内容*/
     #panelcontent {
         margin: 3% 10%;
-   
+
         box-shadow: 5px 5px 10px #06C;
     }
-    
+
     #boxborder {
         width: 100%;
         /*border: 1px solid red;*/
@@ -1001,45 +1001,45 @@
         margin: 4% 4%;
         float: left;
     }
- 
- .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 
 }
 /* 中等屏幕结束*/
@@ -1050,7 +1050,7 @@
     #main {
         width: 100%;
         height: 800px;
-         background-image: url(../images/usa.jpg);
+        background-image: url(../images/usa.jpg);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
@@ -1063,7 +1063,7 @@
 
     #boxborder {
         width: 100%;
-        
+
     }
 
     .box1 {
@@ -1073,46 +1073,46 @@
         float: left;
     }
 
-      
-  
-        .progress {
-    width: 100%;
-    height: 50px;
-    float: left;
-    background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
-    border-radius: 0;
-    /*margin-bottom: 25px;*/
-    overflow: visible;
-    position: relative;
-}
 
-.boxcol {
-    width: 8%;
-    margin: 5px 1%;
-    height: 30px;
-    border: 1px double #73c9e3;
-    border-radius: 35%;
-    background-color: #73c9e3;
-    float: left;
-}
 
-.progress:before,
-.progress:after {
-    content: "";
-    width: 5px;
-    background: #1c2647;
-    position: absolute;
-    top: 0;
-    left: -5px;
-    bottom: 0;
-}
+    .progress {
+        width: 100%;
+        height: 50px;
+        float: left;
+        background: #fff;
+        border-top: 5px solid #1c2647;
+        border-bottom: 5px solid #1c2647;
+        border-radius: 0;
+        /*margin-bottom: 25px;*/
+        overflow: visible;
+        position: relative;
+    }
 
-.progress:after {
-    left: auto;
-    right: -5px;
-}
+    .boxcol {
+        width: 8%;
+        margin: 5px 1%;
+        height: 30px;
+        border: 1px double #73c9e3;
+        border-radius: 35%;
+        background-color: #73c9e3;
+        float: left;
+    }
+
+    .progress:before,
+    .progress:after {
+        content: "";
+        width: 5px;
+        background: #1c2647;
+        position: absolute;
+        top: 0;
+        left: -5px;
+        bottom: 0;
+    }
+
+    .progress:after {
+        left: auto;
+        right: -5px;
+    }
 }
 /* 大屏幕结束 */
 /*----------------------公共样式开始------------------*/
@@ -1141,6 +1141,7 @@ a:link, a:visited {
 
 /*面板主体*/
 #panelbody {
+    
     margin: 2% 10%;
 }
 
@@ -1151,52 +1152,52 @@ a:link, a:visited {
     line-height: 20px;
     border-bottom: 1px solid gray;
 }
-    /*删除按钮样式*/
-    .tab-user > img {
-        width: 20px;
-        height: 20px;
-        cursor: pointer;
-    }
+/*删除按钮样式*/
+.tab-user > img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
 
-      #box-red {
-        background-color: red;
-          border:1px solid #3d4444;
-    }
+#box-red {
+    background-color: red;
+    border:1px solid #3d4444;
+}
 
-    #box-yellow {
-        background-color: yellow;
-        border:1px solid #3d4444;
-    }
+#box-yellow {
+    background-color: yellow;
+    border:1px solid #3d4444;
+}
 
-    #box-gray {
-        background-color: gray;
-        border:1px solid #3d4444;
-    }
+#box-gray {
+    background-color: gray;
+    border:1px solid #3d4444;
+}
 
-    #box-pink {
-        background-color: pink;
-        border:1px solid #3d4444;
-    }
+#box-pink {
+    background-color: pink;
+    border:1px solid #3d4444;
+}
 
-    #box-green {
-        background-color: green;
-        border:1px solid #3d4444;
-    }
+#box-green {
+    background-color: green;
+    border:1px solid #3d4444;
+}
 
-    #box-orange {
-        background-color: orange;
-        border:1px solid #3d4444;
-    }
+#box-orange {
+    background-color: orange;
+    border:1px solid #3d4444;
+}
 
-    #box-purple {
-        background-color: purple;
-        border:1px solid #3d4444;
-    }
+#box-purple {
+    background-color: purple;
+    border:1px solid #3d4444;
+}
 
-    #box-cyan {
-        background-color: cyan;
-        border:1px solid #3d4444;
-    }
+#box-cyan {
+    background-color: cyan;
+    border:1px solid #3d4444;
+}
 
 .close {
     box-shadow: 0 0 10px 10px rgb(0, 0, 0);

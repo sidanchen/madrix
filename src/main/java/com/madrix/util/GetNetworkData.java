@@ -1,7 +1,11 @@
 package com.madrix.util;
 
+import com.madrix.pojo.OpenSchedule;
+import com.madrix.service.LightControllService;
+import com.madrix.service.OpenScheduleService;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -19,6 +23,8 @@ public class GetNetworkData {
     public static final String WEATHERURL = "https://www.timeanddate.com/worldclock/usa/annapolis";
 
 
+    private static OpenScheduleService openScheduleService = SpringContextUtil.getBean("openScheduleServiceImpl");
+    
     /**
      * 获取网页数据并且转换为Document类型
      * @param url
@@ -36,9 +42,24 @@ public class GetNetworkData {
      * @return
      */
     public static String getSunraise(Document doc){
+        OpenSchedule openSchedule = openScheduleService.findById(1);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String sunrise = doc.getElementsByClass("dn-mob").get(1).text().split(" – ")[0];
-        return sdf.format(new Date()) + " " + sunrise;
+        String dateStr = sdf.format(new Date()) + " " + convert(sunrise);
+        try {
+            //判断用户是否设置了提前开关灯的操作
+            int i = 0;
+            if (openSchedule.getBeforeSunrise() != 0) {
+                i= 0-openSchedule.getBeforeSunrise();
+            }
+            if (openSchedule.getAfterSunrise() != 0) {
+                i= openSchedule.getAfterSunrise();
+            }
+            return addMinutesDate(dateStr, i);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return dateStr;
     }
 
     /**
@@ -48,11 +69,20 @@ public class GetNetworkData {
      * @return
      */
     public static String getSunDown(Document doc){
+        OpenSchedule openSchedule = openScheduleService.findById(1);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String sunset = doc.getElementsByClass("dn-mob").get(1).text().split(" – ")[1].substring(0,5);
         String dateStr = sdf.format(new Date()) + " " + convert(sunset);
         try {
-            return addMinutesDate(dateStr, -30);
+            //判断用户是否设置了提前开关灯的操作
+            int i = 0;
+            if (openSchedule.getBeforeSunset() != 0) {
+                i= 0-openSchedule.getBeforeSunset();
+            }
+            if (openSchedule.getAfterSunset() != 0) {
+                i= openSchedule.getAfterSunset();
+            }
+            return addMinutesDate(dateStr, i);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

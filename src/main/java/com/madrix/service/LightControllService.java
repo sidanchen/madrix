@@ -14,4 +14,6 @@ public interface LightControllService extends BaseService<LightControll> {
     LightControll isNight();
 
     LightControll findMaxId();
+    
+    void getNetworkAndWeather();
 }

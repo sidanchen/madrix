@@ -1,15 +1,13 @@
 package com.madrix.job;
 
 import com.madrix.pojo.*;
-import com.madrix.service.LightControllService;
-import com.madrix.service.LightInstructionService;
-import com.madrix.service.OperatorLogService;
-import com.madrix.service.WeatherColorService;
+import com.madrix.service.*;
 import com.madrix.util.MadrixUtil;
 import com.madrix.util.SpringContextUtil;
 import org.quartz.JobExecutionContext;
 import org.quartz.JobExecutionException;
 import org.quartz.StatefulJob;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.IOException;
 import java.util.Date;
@@ -26,6 +24,9 @@ public class AutoSwitchLight implements StatefulJob{
     LightInstructionService lightInstructionService = SpringContextUtil.getBean("lightInstructionServiceImpl");
     private static boolean onFlag = true;
     private static boolean offFlag = true;
+    
+    @Autowired
+    OpenScheduleService openScheduleService;
 
     @Override
     public void execute(JobExecutionContext jobExecutionContext) throws JobExecutionException {
