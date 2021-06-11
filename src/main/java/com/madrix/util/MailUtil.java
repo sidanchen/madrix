@@ -1,5 +1,6 @@
 package com.madrix.util;
 
+import java.io.InputStream;
 import java.security.GeneralSecurityException;
 import java.sql.SQLException;
 import java.sql.Timestamp;
@@ -27,6 +28,21 @@ public class MailUtil {
 	// 网易163邮箱的 SMTP 服务器地址为: smtp.163.com
 	public static String myEmailSMTPHost = "smtp.office365.com";
 
+	static {
+		try {
+			Properties properties = new Properties();
+			// 使用ClassLoader加载properties配置文件生成对应的输入流
+			InputStream in = RemoteInfoSynServiceImpl.class.getClassLoader().getResourceAsStream("remoteurl.properties");
+			// 使用properties对象加载输入流
+			properties.load(in);
+			//获取key对应的value值
+			myEmailAccount = properties.getProperty("myEmailAccount");
+			myEmailPassword = properties.getProperty("myEmailPassword");
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+
 	/**
 	 * 发送邮件方法
 	 * 
@@ -37,10 +53,7 @@ public class MailUtil {
 	 * @author sdc
 	 * @throws GeneralSecurityException
 	 */
-	public static String sendMail(String receiveMailAccount, String msg,String title) throws GeneralSecurityException {
-		if ("0".equals(RemoteInfoSynServiceImpl.sendEmail)) {
-			return "success";
-		}
+	public static String sendMail(String receiveMailAccount, String msg,String title) {
 		// 1. 创建参数配置, 用于连接邮件服务器的参数配置
 		Properties props = new Properties(); // 参数配置
 		props.setProperty("mail.transport.protocol", "smtp"); // 使用的协议（JavaMail规范要求）

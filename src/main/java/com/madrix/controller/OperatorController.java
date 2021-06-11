@@ -191,7 +191,7 @@ public class OperatorController {
                                     + "Please keep your username and password,<br/>"
                                     + "don’t release any information to others.<br/>"
                                     + "If you forget the password, please reset by sending an e-mail to the following mailbox", "Registration Successful!");
-                        } catch (GeneralSecurityException e) {
+                        } catch (Exception e) {
                             e.printStackTrace();
                         }
                     }
@@ -352,7 +352,7 @@ public class OperatorController {
                                 + "  Please reset your password,follow this link:<a href='" + HttpUtil.devUrl + "checkUrl?uuid="
                                 + uuid + "&email=" + operator.getEmail() + "'>" + "" + HttpUtil.devUrl + "checkUrl?uuid=" + uuid
                                 + "&email=" + operator.getEmail() + "</a>", "Change Password");
-                    } catch (GeneralSecurityException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
