@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.io.IOException;
 
 /**
- * 用户处理灯光状态的控制器testadd
+ * 用户处理灯光状态的控制器testaddadd
  * Created by sdc on 2018/2/28.
  */
 @Controller
