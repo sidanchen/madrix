@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 指令下达控制器testdaer
+ * 指令下达控制器testtest
  * 用于下达的灯光操控指令都经由该控制器
  * Created by sdc on 2018/2/28.
  */
